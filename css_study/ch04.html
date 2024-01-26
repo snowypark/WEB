@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        
+        .main-box {
+
+            box-sizing: border-box;
+            margin: 300px auto;
+            position: relative;
+            border: 1px solid rgb(174, 174, 174);
+            border-radius: 4px;
+            width: 400px;
+            height: 300px;
+            background-color: white;
+        }
+
+        .round-box {                
+            
+            position: absolute;
+            right: -30px;
+            top: -15px;
+            /* z-index: -1; */
+            border: 1px solid #03c75a;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: white;
+            width: 246px;
+            height: 125px;
+        }
+
+        .x-button {
+
+            transform: translate(-50%,-50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #03c75a;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="main-box"> 
+        <div class="round-box">
+            <div class="x-button">x</div>
+        </div>  
+    </div>
+</body>
+</html>
