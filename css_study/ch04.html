@@ -4,61 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
     <style>
-
-        /*
-            position : x,y,z좌표 
-            
-         */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
         
-        .main-box {
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .login-box {
+            position: relative;
 
             box-sizing: border-box;
             margin: 300px auto;
-            position: relative;
-            border: 1px solid rgb(174, 174, 174);
+            border: 1px solid #9860607b;
             border-radius: 4px;
-            width: 400px;
-            height: 300px;
-            background-color: white;
+            width: 485px;
+            height: 310px;
+            background-color: rgba(141, 70, 70, 0.361);
         }
 
-        .round-box {                
-            
+        .msg-box {
             position: absolute;
             right: -30px;
-            top: -15px;
-            /* z-index: -1; */
+            top: -20px;
             border: 1px solid #03c75a;
-            border-top-right-radius: 20px;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            background-color: white;
+            border-radius: 25px;
             width: 246px;
-            height: 125px;
+            height: 100px;
+            background-color: white;
         }
 
         .x-button {
-
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             position: absolute;
             top: 50%;
             left: 50%;
-            color: #03c75a;
         }
-
     </style>
-
 </head>
 <body>
-    <div class="main-box"> 
-        <div class="round-box">
+    <div class="login-box">
+        <div class="msg-box">
             <div class="x-button">x</div>
-        </div>  
+        </div>
     </div>
 </body>
 </html>

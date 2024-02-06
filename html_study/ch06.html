@@ -7,19 +7,14 @@
 </head>
 <body>
     <form method="get" action="">
-
         <div>
             <label for="username">아이디</label>
-            <input type="text" id="username" name="usernmae" placeholder="아이디를 입력하세요.">
-            
-    
+            <input type="text" id="username" name="username" placeholder="아이디를 입력하세요.">
         </div>
-    
         <div>
             <label for="password">비밀번호</label>
             <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요.">
         </div>
-    
         <div>
             <input type="radio" id="age10" name="age" value="10">
             <label for="age10">10대</label>
@@ -28,7 +23,6 @@
             <input type="radio" id="age30" name="age" value="30">
             <label for="age30">30대</label>
         </div>
-    
         <div>
             <input type="checkbox" id="phoneCheck" onchange="handleCheck(this)">
             <label for="phone">연락처</label>
@@ -38,18 +32,18 @@
                     const phoneCheckBoxObject = document.querySelector("#phoneCheck");
                     const phoneInputObject = document.querySelector("#phone");
                     phoneInputObject.disabled = !phoneCheckBoxObject.checked;
-                 }
+                }
     
                 function handleCheck(object) {
-                   const phoneInputObject = document.querySelector("#phone");
-                   phoneInputObject.disabled = !object.checked;
-                   if(!object.checked) {
+                    const phoneInputObject = document.querySelector("#phone");
+                    phoneInputObject.disabled = !object.checked;
+    
+                    if(!object.checked) {
                         phoneInputObject.value = "";
-                   }
+                    }
                 }
             </script>
         </div>
-    
         <div>
             <select name="size" id="size">
                 <option value="1">SS</option>
@@ -67,16 +61,12 @@
                 <option value="하의2">하의2</option>
             </datalist>
         </div>
-    
         <div>
             <button type="button">중복확인</button>
         </div>
         <div>
             <button type="submit">전송</button>
         </div>
-
     </form>
-   
-
 </body>
 </html>

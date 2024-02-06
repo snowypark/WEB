@@ -9,32 +9,32 @@
         input[type="checkbox"] {
             /* display: none; */
         }
-        
+
         label {
+            position: relative;
             display: block;
             border: 1px solid #dbdbdb;
             border-radius: 50%;
             width: 35px;
             height: 35px;
-            position: relative;
         }
 
         input[type="checkbox"]:checked + label > div {
-            transform: translate(-50%,-50%);
+            position: absolute;
+            transform: translate(-50%, -50%);
             top: 50%;
             left: 50%;
-            position: absolute;
             border-radius: 50%;
             width: 25px;
             height: 25px;
             background-color: blue;
-            
         }
 
-        input[type="checkbox"]:checked + label> div:not(#chk1:checked+label > div) {
+        input[type="checkbox"]:checked + label > div:not(#chk1:checked + label > div) {
             background-color: red;
         }
     </style>
+
 </head>
 <body>
     <input type="checkbox" id="chk1">
@@ -45,6 +45,5 @@
     <label for="chk2">
         <div></div>
     </label>
-    
 </body>
 </html>
