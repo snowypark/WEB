@@ -3,8 +3,6 @@ window.onload = () => {
 
     const todoInput = document.querySelector(".todo-input");
 
-
-
 }
 
 function getTodoList() {

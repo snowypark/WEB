@@ -4,9 +4,7 @@
 //     console.log(now.getFullYear());
 //     console.log(now.getMonth() +1);
 //     console.log(now.getDate());
-//     console.log(day[now.getDay()]);
-
- 
+//     console.log(day[now.getDay()]); 
 // }
 
 window.onkeyup = (e) => {
@@ -32,7 +30,6 @@ function handleAddTodoModalOpen() {
     }
  
     modal.classList.add("modal-show");
-
     
 }
 
@@ -81,7 +78,6 @@ function handleAddTodoSubmit() {
 
     let lastTodoId = todoList.length === 0? 0 : todoList[todoList.length -1].todoId;
     
-
     let todoObject = {
         todoId : lastTodoId+1,
         content : todoInput.value,
