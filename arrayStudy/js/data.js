@@ -46,6 +46,15 @@ window.onload = () => {
                 content: inputValue
             }
 
+            fetch("http://localhost:8080/data_array/data/addition", {
+                method: "POST",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(dataObj)
+            });
+
             dataList = [...dataList, dataObj];
             addInput.value = "";
             getDataList();
