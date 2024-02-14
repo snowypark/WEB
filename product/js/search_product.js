@@ -11,12 +11,12 @@ async function handleSearchClick() {
 
         const productList = document.querySelector(".product-list");
 
-        productList.innerHTML += ``;
+        productList.innerHTML = ``;
 
         for(let product of responseData.data) {
             productList.innerHTML += `
 
-            <li>product_id: ${product.product_id} / product_name: ${product.product_name} / product_price: ${product.product_price} / product_size: ${product.product_size}</li>
+            <li> <td>${product.product_id}</td>  <td>${product.product_name}</td>  <td> ${product.product_price}</td>  <td>${product.product_size}</td> </li>
             `;
         }
     }catch(error) {

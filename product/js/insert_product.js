@@ -35,9 +35,7 @@ async function handleAddClick() {
         product_size: datainput[2].value
     };
 
-    console.log(data);
     const jsonData = JSON.stringify(data);
-    console.log(jsonData);
 
     const option = {
         method: "post",
