@@ -1,4 +1,4 @@
-function handleSubmitClick() {
+async function handleSubmitClick() {
     const dataInputs = document.querySelectorAll(".data-inputs");
     
     const data = {
@@ -18,12 +18,32 @@ function handleSubmitClick() {
         body: jsonData
     };
 
-    fetch("http://localhost:8080/insert_and_select/data/addition", option)
-    .then((response) => {
-        response.json()
-        .then((json) => {
-            console.log(json)
-        })
-    });
+    try{ 
+    const response = await fetch("http://localhost:8080/insert_and_select/data/addition", option);
+
+    if(!response.ok) {
+        throw await response.json();
+    }
+
+    console.log(response);
+    const json = await response.json();
+    console.log(json);
+    console.log("test");
+    
+    } catch(error) {
+        alert(error.errorMessage);
+    }
+
+
+    // fetch("http://localhost:8080/insert_and_select/data/addition", option)
+    // .then((response) => {
+    //     response.json()
+    //     .then((json) => {
+    //         console.log(json)
+    //     })
+    // }).catch((error) => {
+    //     console.log("프로미스 예외처리");
+    //     console.log(error);
+    // });
 
 }
