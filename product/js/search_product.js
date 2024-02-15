@@ -13,15 +13,25 @@ async function handleSearchClick() {
 
         productList.innerHTML = ``;
 
-        for(let product of responseData.data) {
-            productList.innerHTML += `
-
-            <li> <td>${product.product_id}</td>  <td>${product.product_name}</td>  <td> ${product.product_price}</td>  <td>${product.product_size}</td> </li>
-            `;
+        for(let product of responseData) {
+            productList.innerHTML += ProductInfoTr(product);
         }
+
+        
     }catch(error) {
         console.log(error);
     }
 
 
+
+    function ProductInfoTr({productId, productName, productPrice, productSize}) {
+        return `
+            <tr>
+                <td>${productId}</td>
+                <td>${productName}</td>
+                <td>${productPrice}</td>
+                <td>${productSize}</td>
+            </tr>
+        `;
+    }
 }
